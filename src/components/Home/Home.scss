@@ -1,0 +1,27 @@
+.home-container {
+  background-color: #a81e26;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  color: #fff;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .label-upload {
+    padding: 15px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .input-upload {
+    display: none;
+  }
+}
