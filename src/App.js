@@ -25,7 +25,7 @@ function App() {
           type: mimeType,
         })
       );
-      a.setAttribute("download", fileName);
+      a.setAttribute("download", `${fileName}.csv`);
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -58,9 +58,7 @@ function App() {
 
     const promises = formattedList.map(async (item) => ({
       ...item,
-      "Shipping Neighborhood": await getNeighborhood(
-        formatCep(item["Shipping Zip"])
-      ),
+      " Bairro ": await getNeighborhood(formatCep(item["Shipping Zip"])),
     }));
     const listWithNeighborhood = await Promise.all(promises);
     generateCsv(listWithNeighborhood);
